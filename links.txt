@@ -9,3 +9,6 @@ https://github.com/islandfuture/trackduino_board
 
 how make yours board in arduino IDE:
 http://robotosha.ru/arduino/install-core-arduino-ide.html
+
+my yandex folder with additional developments:
+https://disk.yandex.ru/d/udhPkplW2dkpug
