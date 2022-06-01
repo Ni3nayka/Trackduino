@@ -1,3 +1,13 @@
+/*
+ * Integration the Trackduino to Arduino IDE
+ * 
+ * This sketch is almost entirely a copy of the pin.h 
+ * file from the libraries of the official program
+ * 
+ * Bakay Egor, june 2022
+ * https://github.com/Ni3nayka/Trackduino
+ */
+
 
 //#include <avr/pgmspace.h>
 
@@ -84,6 +94,12 @@
 #define MOTOR4_IN1  34
 #define MOTOR4_IN2  33
 #define MOTOR4_EN   23
+
+#define COUNT_MOTOR 4
+const int STBY[COUNT_MOTOR] = {STBY1,STBY2,STBY3,STBY4};
+const int MOTOR_IN1[COUNT_MOTOR] = {MOTOR1_IN1,MOTOR2_IN1,MOTOR3_IN1,MOTOR4_IN1};
+const int MOTOR_IN2[COUNT_MOTOR] = {MOTOR1_IN2,MOTOR2_IN2,MOTOR3_IN2,MOTOR4_IN2}; 
+const int MOTOR_EN[COUNT_MOTOR] = {MOTOR1_EN,MOTOR2_EN,MOTOR3_EN,MOTOR4_EN};
 
 #define RGB_RED    30
 #define RGB_GREEN  31

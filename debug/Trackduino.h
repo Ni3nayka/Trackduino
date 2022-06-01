@@ -1,5 +1,15 @@
-#include <Arduino.h>
+/*
+ * Integration the Trackduino to Arduino IDE
+ * 
+ * Bakay Egor, june 2022
+ * https://github.com/Ni3nayka/Trackduino
+ */
+ 
 #pragma once
+//#ifndef wdefaerhtsrymdsgaegrthfhbdvsthdtydrhgfghmjtrgseafgyjut
+//#define wdefaerhtsrymdsgaegrthfhbdvsthdtydrhgfghmjtrgseafgyjut
+
+#include <Arduino.h>
 
 #include "pins.h"
 
@@ -8,7 +18,8 @@
 #include <SD.h>
 #endif
 
-class Trackduino {
+
+class TrackDuino {
 
   public:
 
@@ -22,8 +33,7 @@ class Trackduino {
     void stop();
     void block();*/
 
-    int qwerty = 0;
-    int get_qwerty();
+    setup();
 
     // RGB
     void RGB(int r=0, int g=0, int b=0);
@@ -35,8 +45,12 @@ class Trackduino {
 
     // motor 
     motor(int n, int speed=0);
+    motor_forward(int n);
+    motor_backward(int n);
     stop_motor(int n);
     block_motor(int n);
+    reverse_clear();
+    reverse_motor(int n, bool dir);
     
     // SD
     #ifdef Trackduino_SD_enable
@@ -55,20 +69,8 @@ class Trackduino {
 
 
   private:
-
-    //void Initialize();
-    //double dispKp;
-    int _max_speed;
-    byte _mode;
-    byte _pwm_pin;
-    byte _dir_1_pin;
-    byte _dir_2_pin;
-
-
+    bool revers_motor[COUNT_MOTOR] = {0,0,0,0}; // WEAK NODE!!! - when changing COUNT_MOTOR
 };
+//#endif
 
-Trackduino trackduino;
-
-Trackduino::get_qwerty() {
-  return 3;
-}
+//extern TrackDuino Trackduino;
