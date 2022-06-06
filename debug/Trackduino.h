@@ -36,12 +36,13 @@ class TrackDuino {
     setup();
 
     // RGB
-    void RGB(int r=0, int g=0, int b=0);
-    void RGB_color(String color="OFF");
-    void RGB_red();
-    void RGB_green();
-    void RGB_blue();
-    void RGB_off();
+    RGB(bool r=0, bool g=0, bool b=0);
+    RGB_color(String color="OFF");
+    RGB_red();
+    RGB_green();
+    RGB_blue();
+    RGB_white();
+    RGB_off();
 
     // motor 
     motor(int n, int speed=0);

@@ -7,13 +7,22 @@
 
 
 //#define Trackduino_SD_enable
-#include "Trackduino.h"                               // подключаем библиотеку
+#include "Trackduino.h"
 TrackDuino Trackduino;
 
-void setup() {                                         // установка
-  Serial.begin(9600);                                  // открытие монитора порта
+void setup() { 
+  Serial.begin(9600); 
   Trackduino.setup();
-  Trackduino.motor(3,100);
+  /*for (int i = -100; i<=150; i++) {
+    Trackduino.motor(3,i);
+    delay(10);
+  }
+  Trackduino.stop_motor(3);*/
+  Trackduino.RGB(0,0,100);
+  delay(1000);
+  Trackduino.RGB(0,0,50);
+  delay(1000);
+  Trackduino.RGB_off();
 }
 
 void loop () { 
