@@ -45,8 +45,9 @@ TrackDuino::motor(int n, int speed=0) {
   if (n>COUNT_MOTOR || n<1) return;
   n--;
   speed = map(constrain(speed,-100,100),0,100,0,255);
+  Serial.println(speed);
   digitalWrite(STBY[n],speed!=0);
-  analogWrite(MOTOR_EN[n],abs(speed!=0));
-  digitalWrite(MOTOR_IN1[n],speed>0==revers_motor[n]);
-  digitalWrite(MOTOR_IN2[n],speed<0==revers_motor[n]);
+  analogWrite(MOTOR_EN[n],abs(speed));
+  digitalWrite(MOTOR_IN1[n],(speed>0)==revers_motor[n]);
+  digitalWrite(MOTOR_IN2[n],(speed<0)==revers_motor[n]);
 }
