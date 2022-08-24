@@ -5,7 +5,7 @@
  * https://github.com/Ni3nayka/Trackduino
  */
 
-#include "Trackduino.h"
+#include "Trackduino_main.h"
 #pragma once
 
 TrackDuino::setup() {
@@ -19,11 +19,11 @@ TrackDuino::setup() {
   pinMode(RGB_GREEN, OUTPUT);
   pinMode(RGB_BLUE, OUTPUT);
   // button
-  pinMode(BTN_DOWN, INPUT);
-  pinMode(BTN_RIGHT, INPUT);
-  pinMode(BTN_LEFT, INPUT);
-  pinMode(BTN_UP, INPUT);
-  pinMode(BTN_CENTER, INPUT);
+  pinMode(BTN_DOWN, INPUT_PULLUP);
+  pinMode(BTN_RIGHT, INPUT_PULLUP);
+  pinMode(BTN_LEFT, INPUT_PULLUP);
+  pinMode(BTN_UP, INPUT_PULLUP);
+  pinMode(BTN_CENTER, INPUT_PULLUP);
   // OUT ports
   pinMode(OUT1, OUTPUT);
   pinMode(OUT2, OUTPUT);
