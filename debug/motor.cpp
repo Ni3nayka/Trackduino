@@ -5,20 +5,19 @@
  * https://github.com/Ni3nayka/Trackduino
  */
 
-#include "Trackduino.h"
+#include "Trackduino_main.h"
 #pragma once
 
 TrackDuino::reverse_clear() {
   for (int i = 0; i<COUNT_MOTOR; i++) {
-    revers_motor[i] = 0;
+    _revers_motor[i] = 0;
   }
 }
 
 TrackDuino::reverse_motor(int n, bool dir) {
   if (n>COUNT_MOTOR || n<1) return;
-  revers_motor[n-1] = dir;
+  _revers_motor[n-1] = dir;
 }
-
 
 TrackDuino::motor_forward(int n) { 
   TrackDuino::motor(n,100);
@@ -46,8 +45,8 @@ TrackDuino::motor(int n, int speed=0) {
   n--;
   speed = map(constrain(speed,-100,100),0,100,0,255);
   Serial.println(speed);
-  digitalWrite(STBY[n],speed!=0);
-  analogWrite(MOTOR_EN[n],abs(speed));
-  digitalWrite(MOTOR_IN1[n],(speed>0)==revers_motor[n]);
-  digitalWrite(MOTOR_IN2[n],(speed<0)==revers_motor[n]);
+  analogWrite(STBY[n],abs(speed));
+  digitalWrite(MOTOR_EN[n],speed!=0);
+  digitalWrite(MOTOR_IN1[n],(speed>0)==_revers_motor[n]);
+  digitalWrite(MOTOR_IN2[n],(speed<0)==_revers_motor[n]);
 }
