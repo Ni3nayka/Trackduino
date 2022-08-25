@@ -1,29 +1,25 @@
 /*
- * Integration the Trackduino to Arduino IDE
- * 
- * Bakay Egor, june 2022
+ * Integration the Trackduino to Arduino IDE:
  * https://github.com/Ni3nayka/Trackduino
+ * 
+ * author: Egor Bakay <egor_bakay@inbox.ru>
+ * write:  june 2022
+ * modify: august 2022
  */
 
 #include "Trackduino_main.h"
 #pragma once
 
 TrackDuino::setup() {
-  // motor
-  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(STBY[i], OUTPUT);
-  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_IN1[i], OUTPUT);
-  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_IN2[i], OUTPUT);
-  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_EN[i], OUTPUT);
-  // RGB
-  pinMode(RGB_RED, OUTPUT);
-  pinMode(RGB_GREEN, OUTPUT);
-  pinMode(RGB_BLUE, OUTPUT);
-  // button
-  pinMode(BTN_DOWN, INPUT_PULLUP);
-  pinMode(BTN_RIGHT, INPUT_PULLUP);
-  pinMode(BTN_LEFT, INPUT_PULLUP);
-  pinMode(BTN_UP, INPUT_PULLUP);
-  pinMode(BTN_CENTER, INPUT_PULLUP);
+  TrackDuino::setup_motor();
+  TrackDuino::setup_RGB();
+  TrackDuino::setup_BTN();
+  TrackDuino::setup_IN_OUT_pins();
+  // bluetooth
+  // ...
+}
+
+TrackDuino::setup_IN_OUT_pins() {
   // OUT ports
   pinMode(OUT1, OUTPUT);
   pinMode(OUT2, OUTPUT);
@@ -33,6 +29,13 @@ TrackDuino::setup() {
   pinMode(OUT6, OUTPUT);
   pinMode(OUT7, OUTPUT);
   pinMode(OUT8, OUTPUT);
-  // bluetooth
-  // ...
+  // IN ports
+  pinMode(IN1, INPUT);
+  pinMode(IN2, INPUT);
+  pinMode(IN3, INPUT);
+  pinMode(IN4, INPUT);
+  pinMode(IN5, INPUT);
+  pinMode(IN6, INPUT);
+  pinMode(IN7, INPUT);
+  pinMode(IN8, INPUT);
 }

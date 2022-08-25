@@ -10,6 +10,12 @@
 #include "Trackduino_main.h"
 #pragma once
 
+TrackDuino::setup_RGB() {
+  pinMode(RGB_RED, OUTPUT);
+  pinMode(RGB_GREEN, OUTPUT);
+  pinMode(RGB_BLUE, OUTPUT);
+}
+
 TrackDuino::RGB(bool r=0, bool g=0, bool b=0) {
   digitalWrite(RGB_RED, r);
   digitalWrite(RGB_GREEN, g);

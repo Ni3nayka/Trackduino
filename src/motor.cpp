@@ -8,6 +8,13 @@
 #include "Trackduino_main.h"
 #pragma once
 
+TrackDuino::setup_motor() {
+  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(STBY[i], OUTPUT);
+  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_IN1[i], OUTPUT);
+  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_IN2[i], OUTPUT);
+  for (int i = 0; i<COUNT_MOTOR; i++) pinMode(MOTOR_EN[i], OUTPUT);
+}
+
 TrackDuino::reverse_clear() {
   for (int i = 0; i<COUNT_MOTOR; i++) {
     _revers_motor[i] = 0;

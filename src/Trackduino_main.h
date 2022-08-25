@@ -18,6 +18,7 @@
 #include <SD.h>
 #endif
 
+#define TRACKDUINO_LIB_VERSION "1.0.0 beta"
 
 class TrackDuino {
 
@@ -34,8 +35,11 @@ class TrackDuino {
     void block();*/
 
     setup();
+    //version();
+    setup_IN_OUT_pins();
 
     // RGB
+    setup_RGB();
     RGB(bool r=0, bool g=0, bool b=0);
     RGB_color(String color="OFF");
     RGB_red();
@@ -48,6 +52,7 @@ class TrackDuino {
     RGB_turquoise();
 
     // motor 
+    setup_motor();
     motor(int n, int speed=0);
     motor_forward(int n);
     motor_backward(int n);
@@ -70,6 +75,7 @@ class TrackDuino {
     // servo
 
     // button
+    setup_BTN();
     BTN_up();
     BTN_down();
     BTN_left();
