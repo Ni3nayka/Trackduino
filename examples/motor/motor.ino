@@ -36,6 +36,7 @@ void setup() {
   // останавливаем мотор
   Trackduino.stop_motor(motor_number);     // вариант 1
   Trackduino.motor(motor_number,0);        // вариант 2
+  Trackduino.motor(motor_number);          // вариант 3
   delay(1000);
   // блокируем мотор (данная операцию не рекомендуется долго использовать, т.к. моторшилд будет перегреваться)
   Trackduino.block_motor(motor_number);
