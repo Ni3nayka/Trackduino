@@ -13,6 +13,9 @@ void setup() {
   Serial.begin(9600);
   Trackduino.setup();
 
+  // инициализировать только пины IN и OUT
+  // Trackduino.setup_IN_OUT_pins();
+
   // проверить версию библиотеки
   // Serial.println(TRACKDUINO_LIB_VERSION); 
 
