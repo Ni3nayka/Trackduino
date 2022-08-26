@@ -1,13 +1,15 @@
-#include <Arduino.h>
-#include <TimerOne.h>
-#include <TimerThree.h>
-//#include <PinChangeInt.h> 
-#include <EnableInterrupt.h> 
-#include <OneWire.h>
+
+#include "Trackduino.h"
+#include <Wire.h>
+#pragma once
+//#include <TimerOne.h>
+//#include <TimerThree.h>
+//#include <EnableInterrupt.h> 
+//#include <OneWire.h>
 
 
-#include "..\..\libraries\Wire\Wire.h"
-#include <SoftPWM.h>
+//#include "..\..\libraries\Wire\Wire.h"
+//#include <SoftPWM.h>
 
 
 // void test()
@@ -340,7 +342,7 @@ void Encoder4Scan(void){
 	Enc4State = New;
 }
 
-void setupEnc(int encoder,int  CH_A,int  CH_B){
+/*void setupEnc(int encoder,int  CH_A,int  CH_B){
 	//attachInterrupt(digitalPinToInterrupt(ENC_CH_A_INT), EncoderScan, CHANGE);
 	//attachInterrupt(digitalPinToInterrupt(ENC_CH_B_INT), EncoderScan, CHANGE);
 	switch(encoder){
@@ -382,18 +384,18 @@ void setupEnc(int encoder,int  CH_A,int  CH_B){
 			break;
 		}
 	}
-}
+}*/
 
 //============== Motors stuff========================
 
  volatile int newMotorSpeed[4] = {0, 0, 0, 0}; //сюда записываются "целевые" значения скорости
  volatile int currentMotorSpeed[4] = {0, 0, 0, 0}; //текущие значения скорости, первый элемент не используется
  
-void motorsAccelerationSetup(unsigned int millisToFullSpeed)
+/*void motorsAccelerationSetup(unsigned int millisToFullSpeed)
 {
 	unsigned long newTimerValue = (millisToFullSpeed*10);
 	Timer3.initialize(newTimerValue);	
-}
+}*/
 
  
 void motorsHandler()
@@ -844,7 +846,7 @@ bool shock(int port){
 	
 }
 
-int temperature(int port){
+/*int temperature(int port){
 OneWire ds(port);
 byte data[2];
 ds.reset(); 
@@ -859,7 +861,7 @@ data[1] = ds.read();
 int Temp = (data[1]<< 8)+data[0];
 Temp = Temp>>4;
 return Temp;
-}
+}*/
 
 bool vibration(int port){
 	int reading = analogRead(port);
@@ -1153,7 +1155,7 @@ bool RC(long BT_ID)
 
 
 
-void IRRC_setup(int pin, uint8_t Channl)
+/*void IRRC_setup(int pin, uint8_t Channl)
 {
 	
 	pinMode(pin, INPUT);     //set the pin to input
@@ -1192,7 +1194,7 @@ void IRRC_setup(int pin, uint8_t Channl)
             return;
         //default:
       }
-}
+}*/
 
 
 //
@@ -1276,7 +1278,8 @@ bluetooth_aZ;
 
 bool bluetooth_F1, bluetooth_F2, bluetooth_F3, bluetooth_F4, bluetooth_F5, bluetooth_F6;
 
-extern bool BTenable; // from main.c
+//extern bool BTenable; // from main.c
+bool BTenable = 0;
 void BTinit(void)
 {
  Serial.begin(115200); 
@@ -1292,40 +1295,6 @@ for (int i=0;i<7;i++)
 for (int i=0;i<9;i++)
   command[i] = 0x00;
 }
-
-/* String getString(String name, int value) {
-  String result = "";
-  result += name;
-  result += value;
-  result += ", ";
-  return result;
-}
-String getAnotherString(String name, boolean value) {
-  String result = "";
-  result += name;
-  result += value;
-  result += ", ";
-  return result; 
-}*/
-
-/* void showValues() {
-      String str = "";
-      str += getString("x=",value[0]);
-      str += getString("y=",value[1]);
-      str += getString("z=",value[2]);
-      str += getString("w=",value[3]);
-      str += getString("ax=",value[4]);
-      str += getString("ay=",value[5]);
-      str += getString("az=",value[6]);
-      str += getAnotherString("f1=",f[0]);
-      str += getAnotherString("f2=",f[1]);
-      str += getAnotherString("f3=",f[2]);
-      str += getAnotherString("f4=",f[3]);
-      str += getAnotherString("f5=",f[4]);
-      str += getAnotherString("f6=",f[5]);
-      str += getString("Voice=",(int)(command[8]));
-      Serial.println(str);      
-} */
 
 void calculateValues() {  
       int fData = (int)command[7];

@@ -24,8 +24,8 @@
 
   // TRACKDUINO V2
 
-#ifndef Pins_Arduino_h
-#define Pins_Arduino_h
+//#ifndef Pins_Arduino_h
+//#define Pins_Arduino_h
 
 #include <avr/pgmspace.h>
 
@@ -35,87 +35,88 @@
 //old #define digitalPinHasPWM(p)         (((p) >= 2 && (p) <= 13) || ((p) >= 44 && (p)<= 46))
 #define digitalPinHasPWM(p)((p) == 3 || (p) == 5 || (p) == 6 || (p) == 9 || (p) == 10 || (p) == 11  || (p) == 22 || (p) == 23 || (p) == 24 || (p) == 25 || (p) == 26 || (p) == 44 || (p) == 45 || (p) == 46 || (p) == 38)
 
-static const uint8_t SS   = 53;
-static const uint8_t MOSI = 51;
-static const uint8_t MISO = 50;
-static const uint8_t SCK  = 52;
+#define SS    53
+#define MOSI  51
+#define MISO  50
+#define SCK   52
 
-static const uint8_t SDA = 20;
-static const uint8_t SCL = 21;
+#define SDA  20
+#define SCL  21
 #define LED_BUILTIN 13
 
-static const uint8_t A0 = 54;
-static const uint8_t A1 = 55;
-static const uint8_t A2 = 56;
-static const uint8_t A3 = 57;
-static const uint8_t A4 = 58;
-static const uint8_t A5 = 59;
-// static const uint8_t A6 = 60;
-// static const uint8_t A7 = 61;
-// static const uint8_t A8 = 62;
-// static const uint8_t A9 = 63;
-// static const uint8_t A10 = 64;
-// static const uint8_t A11 = 65;
-// static const uint8_t A12 = 66;
-// static const uint8_t A13 = 67;
-// static const uint8_t A14 = 68;
-// static const uint8_t A15 = 69;
+#define A0  54
+#define A1  55
+#define A2  56
+#define A3  57
+#define A4  58
+#define A5  59
+// #define A6 = 60;
+// #define A7 = 61;
+// #define A8 = 62;
+// #define A9 = 63;
+// #define A10 = 64;
+// #define A11 = 65;
+// #define A12 = 66;
+// #define A13 = 67;
+// #define A14 = 68;
+// #define A15 = 69;
 
-static const uint8_t IN1 = 62;
-static const uint8_t IN1INT =62;
-static const uint8_t IN2 = 63;
-static const uint8_t IN2INT = 63;
-static const uint8_t IN3 = 64;
-static const uint8_t IN3INT = 64;
-static const uint8_t IN4 = 65;
-static const uint8_t IN4INT = 65;
-static const uint8_t IN5 = 66;
-static const uint8_t IN6 = 67;
-static const uint8_t IN7 = 68;
-static const uint8_t IN8 = 69;
+#define IN1  62
+#define IN1INT 62
+#define IN2  63
+#define IN2INT  63
+#define IN3  64
+#define IN3INT  64
+#define IN4  65
+#define IN4INT  65
+#define IN5  66
+#define IN6  67
+#define IN7  68
+#define IN8  69
 
-static const uint8_t OUT5 = 22;
-static const uint8_t OUT4 = 26;
-static const uint8_t OUT3 = 24;
-static const uint8_t OUT2 = 25;
-static const uint8_t OUT1 = 38;
-static const uint8_t OUT6 = 37;
-static const uint8_t OUT7 = 29;
-static const uint8_t OUT8 = 28;
+#define OUT5  22
+#define OUT4  26
+#define OUT3  24
+#define OUT2  25
+#define OUT1  38
+#define OUT6  37
+#define OUT7  29
+#define OUT8  28
 
-static const uint8_t BTN_DOWN = 39;
-static const uint8_t BTN_RIGHT = 41;
-static const uint8_t BTN_LEFT = 60;
-static const uint8_t BTN_UP = 40;
-static const uint8_t BTN_CENTER = 61;
-
-
-static const uint8_t MOTOR1_IN1 = 49;
-static const uint8_t MOTOR1_IN2 = 48;
-static const uint8_t MOTOR1_EN = 45;
-
-static const uint8_t MOTOR2_IN1 = 47;
-static const uint8_t MOTOR2_IN2 = 43;
-static const uint8_t MOTOR2_EN = 44;
-
-static const uint8_t MOTOR3_IN1 = 36;
-static const uint8_t MOTOR3_IN2 = 35;
-static const uint8_t MOTOR3_EN = 46;
-
-static const uint8_t MOTOR4_IN1 = 34;
-static const uint8_t MOTOR4_IN2 = 33;
-static const uint8_t MOTOR4_EN = 23;
+#define BTN_DOWN  39
+#define BTN_RIGHT  41
+#define BTN_LEFT  60
+#define BTN_UP  40
+#define BTN_CENTER  61
 
 
+#define MOTOR1_IN1  49
+#define MOTOR1_IN2  48
+#define MOTOR1_EN  45
 
-static const uint8_t RGB_RED = 30;
-static const uint8_t RGB_GREEN = 31;
-static const uint8_t RGB_BLUE = 32;
+#define MOTOR2_IN1  47
+#define MOTOR2_IN2  43
+#define MOTOR2_EN  44
 
-static const uint8_t SOUND_PIN = 27;
+#define MOTOR3_IN1  36
+#define MOTOR3_IN2  35
+#define MOTOR3_EN  46
 
-static const uint8_t BT_SW= 70;
-static const uint8_t SD_CS= 53;
+#define MOTOR4_IN1  34
+#define MOTOR4_IN2  33
+#define MOTOR4_EN  23
+
+
+
+#define RGB_RED  30
+#define RGB_GREEN  31
+#define RGB_BLUE  32
+
+#define SOUND_PIN  27
+
+#define BT_SW 70
+#define SD_CS 53
+
 // A majority of the pins are NOT PCINTs, SO BE WARNED (i.e. you cannot use them as receive pins)
 // Only pins available for RECEIVE (TRANSMIT can be on any pin):
 // (I've deliberately left out pin mapping to the Hardware USARTs - seems senseless to me)
@@ -535,4 +536,4 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 #define SERIAL_PORT_HARDWARE_OPEN1  Serial2
 #define SERIAL_PORT_HARDWARE_OPEN2  Serial3
 
-#endif
+//#endif
