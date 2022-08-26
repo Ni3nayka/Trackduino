@@ -26,14 +26,6 @@ class TrackDuino {
 
     //#define AUTOMATIC  1
 
-    /*motor(String a, int a_pin, String b="", int b_pin=0,  String c="", int c_pin=0);
-    int TestMode();
-    void SetSpeed(int predel);
-
-    void run(int speed);
-    void stop();
-    void block();*/
-
     setup();
     //version();
     setup_IN_OUT_pins();
