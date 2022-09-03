@@ -78,6 +78,3 @@ class TrackDuino {
   private:
     bool _revers_motor[COUNT_MOTOR] = {0,0,0,0}; // WEAK NODE!!! - when changing COUNT_MOTOR
 };
-//#endif
-
-//extern TrackDuino Trackduino;
