@@ -5,11 +5,12 @@ This library was created as an alternative to the official Trackduino IDE, becau
 
 
 
-ATTENTION: The library gives access to all pins and devices, and does not repeat devices that are connected externally!
+### ATTENTION: 
+The library gives access to all pins and devices, and does not repeat devices that are connected externally!
 
 
 
-API:
+### API:
 
 For firmware, use the "Arduino Mega or Mega 2560" board in the Arduino IDE.
 
@@ -17,7 +18,7 @@ For all implemented devices on the board, there are examples available through t
 
 
 
-Driver:
+### Driver:
 
 There is an archive in the repository <driver.zip > if you have any problems identifying the board, install it.
 
