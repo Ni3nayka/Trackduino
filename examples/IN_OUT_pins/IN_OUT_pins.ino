@@ -4,12 +4,14 @@
  * 
  * author: Egor Bakay <egor_bakay@inbox.ru>
  * write:  august 2022
- * modify: august 2022
+ * modify: september 2022
  */
 
+// подключаем библиотеку
 #include <Trackduino.h>
 
 void setup() { 
+  // инициализируем
   Serial.begin(9600);
   Trackduino.setup();
 
@@ -25,7 +27,13 @@ void setup() {
   Serial.println(analogRead(IN1));
   // запускаем OUT1 порт
   digitalWrite(OUT1,HIGH);
-  
+
+  // также можно настроить пины на другой режим работы 
+  // ВНИМАНИЕ: ШИМ есть только у OUT пинов, а у IN пинов только АЦП, не наоборот!
+  pinMode(IN2,OUTPUT);
+  digitalWrite(IN2,1);
+  pinMode(OUT2,INPUT);
+  Serial.println(digitalRead(OUT2));
 }
 
 void loop () { 

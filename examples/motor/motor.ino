@@ -7,9 +7,11 @@
  * modify: august 2022
  */
 
+// подключаем библиотеку
 #include <Trackduino.h>
 
 void setup() { 
+  // инициализируем
   Trackduino.setup();
 
   // инициализировать только моторы

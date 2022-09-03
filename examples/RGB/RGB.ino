@@ -7,9 +7,11 @@
  * modify: august 2022
  */
 
+// подключаем библиотеку
 #include <Trackduino.h>
 
 void setup() { 
+  // инициализируем
   Trackduino.setup();
 
   // инициализировать только RGB
@@ -20,44 +22,44 @@ void setup() {
   // Serial.println(TRACKDUINO_LIB_VERSION); 
   
   // красный
-  Trackduino.RGB_red();       
-  Trackduino.RGB(1,0,0);
-  Trackduino.RGB_color("RED");
+  Trackduino.RGB_red();              // Вариант 1   
+  Trackduino.RGB(1,0,0);             // Вариант 2
+  Trackduino.RGB_color("RED");       // Вариант 3
   delay(1000);
   // зеленый
-  Trackduino.RGB_green();     
-  Trackduino.RGB(0,1,0);
-  Trackduino.RGB_color("GREEN");
+  Trackduino.RGB_green();            // Вариант 1    
+  Trackduino.RGB(0,1,0);             // Вариант 2
+  Trackduino.RGB_color("GREEN");     // Вариант 3
   delay(1000);
   // синий
-  Trackduino.RGB_blue();      
-  Trackduino.RGB(0,0,1);
-  Trackduino.RGB_color("BLUE");
+  Trackduino.RGB_blue();             // Вариант 1      
+  Trackduino.RGB(0,0,1);             // Вариант 2
+  Trackduino.RGB_color("BLUE");      // Вариант 3
   delay(1000);
   // белый
-  Trackduino.RGB_white();     
-  Trackduino.RGB(1,1,1);
-  Trackduino.RGB_color("WHITE");
+  Trackduino.RGB_white();            // Вариант 1     
+  Trackduino.RGB(1,1,1);             // Вариант 2
+  Trackduino.RGB_color("WHITE");     // Вариант 3
   delay(1000);
   // желтый
-  Trackduino.RGB_yellow();    
-  Trackduino.RGB(1,1,0);
-  Trackduino.RGB_color("YELLOW");
+  Trackduino.RGB_yellow();           // Вариант 1    
+  Trackduino.RGB(1,1,0);             // Вариант 2
+  Trackduino.RGB_color("YELLOW");    // Вариант 3
   delay(1000);
   // фиолетовый
-  Trackduino.RGB_purple();   
-  Trackduino.RGB(1,0,1);
-  Trackduino.RGB_color("PURPLE");
+  Trackduino.RGB_purple();           // Вариант 1   
+  Trackduino.RGB(1,0,1);             // Вариант 2
+  Trackduino.RGB_color("PURPLE");    // Вариант 3
   delay(1000);
   // бирюзовый
-  Trackduino.RGB_turquoise(); 
-  Trackduino.RGB(0,1,1);
-  Trackduino.RGB_color("TURQUOISE");
+  Trackduino.RGB_turquoise();        // Вариант 1 
+  Trackduino.RGB(0,1,1);             // Вариант 2
+  Trackduino.RGB_color("TURQUOISE"); // Вариант 3
   delay(1000);
   // выключить
-  Trackduino.RGB_off();       
-  Trackduino.RGB(0,0,0);
-  Trackduino.RGB_color("OFF");
+  Trackduino.RGB_off();              // Вариант 1   
+  Trackduino.RGB(0,0,0);             // Вариант 2
+  Trackduino.RGB_color("OFF");       // Вариант 3
   delay(1000);
 }
 
