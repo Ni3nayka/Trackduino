@@ -1,7 +1,19 @@
+/*
+ * Integration the Trackduino to Arduino IDE:
+ * https://github.com/Ni3nayka/Trackduino
+ * 
+ * Bluetooth::operating and Bluetooth::update - 
+ * The code for this function is taken from the original IDE and is given a normal look
+ * 
+ * author: Egor Bakay <egor_bakay@inbox.ru>
+ * write:  august 2022
+ * modify: august 2022
+ */
+
 #pragma once
 
 #include <Arduino.h>
-//#include "Trackduino.h"
+
 #define commandSize 9
 
 class Bluetooth {
