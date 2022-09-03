@@ -2,31 +2,62 @@
 
 ####### KEYWORD1 – big orange - data types #######
 
-using_servo           KEYWORD1
-using_motor           
-ServoMotor            KEYWORD1
-motor                 KEYWORD1
-#TestMode             KEYWORD1
+Trackduino            KEYWORD1
+Bluetooth             KEYWORD1
 
 ### KEYWORD2 – orange - methods and functions ####
 
-write                 KEYWORD2
-writeMicroseconds     KEYWORD2
-read                  KEYWORD2
-ServoUpdate           KEYWORD2
-SetMode               KEYWORD2
-TestMode              KEYWORD2
-servo_motor_data_cell KEYWORD2
-TestMode              KEYWORD2
-SetSpeed              KEYWORD2
-run                   KEYWORD2
-stop                  KEYWORD2
-block                 KEYWORD2
+Trackduino            KEYWORD2
+
+setup_RGB            KEYWORD2
+RGB                  KEYWORD2
+RGB_color            KEYWORD2
+RGB_red              KEYWORD2
+RGB_green            KEYWORD2
+RGB_blue             KEYWORD2
+RGB_white            KEYWORD2
+RGB_off              KEYWORD2
+RGB_yellow           KEYWORD2
+RGB_purple           KEYWORD2
+RGB_turquoise        KEYWORD2
+
+setup_BTN            KEYWORD2
+BTN_up               KEYWORD2
+BTN_down             KEYWORD2
+BTN_left             KEYWORD2
+BTN_right            KEYWORD2
+BTN_center           KEYWORD2
+
+setup_motor          KEYWORD2
+motor                KEYWORD2
+motor_forward        KEYWORD2
+motor_backward       KEYWORD2
+stop_motor           KEYWORD2
+block_motor          KEYWORD2
+reverse_clear        KEYWORD2
+reverse_motor        KEYWORD2
+
+setup_IN_OUT_pins    KEYWORD2
+
 
 ########### LITERAL1 – blue - constant ###########
 
-_servo_motor_data_my  LITERAL1
-PWM                   LITERAL1
-DIR                   LITERAL1
+IN1                   LITERAL1
+IN2                   LITERAL1
+IN3                   LITERAL1
+IN4                   LITERAL1
+IN5                   LITERAL1
+IN6                   LITERAL1
+IN7                   LITERAL1
+IN8                   LITERAL1
+
+OUT1                  LITERAL1
+OUT2                  LITERAL1
+OUT3                  LITERAL1
+OUT4                  LITERAL1
+OUT5                  LITERAL1
+OUT6                  LITERAL1
+OUT7                  LITERAL1
+OUT8                  LITERAL1
 
 
