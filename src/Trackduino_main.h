@@ -18,8 +18,6 @@
 #include <SD.h>
 #endif
 
-#define TRACKDUINO_LIB_VERSION "1.0.0 beta"
-
 class TrackDuino {
 
   public:
