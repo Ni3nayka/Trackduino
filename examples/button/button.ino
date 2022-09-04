@@ -16,10 +16,7 @@ void setup() {
   Trackduino.setup();
 
   // инициализировать только кнопки
-  // Trackduino.setup_BTN();
-
-  // проверить версию библиотеки
-  // Serial.println(TRACKDUINO_LIB_VERSION); 
+  // Trackduino.setup_BTN(); 
 }
 
 void loop () { 

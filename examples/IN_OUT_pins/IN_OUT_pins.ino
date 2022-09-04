@@ -18,9 +18,6 @@ void setup() {
   // инициализировать только пины IN и OUT
   // Trackduino.setup_IN_OUT_pins();
 
-  // проверить версию библиотеки
-  // Serial.println(TRACKDUINO_LIB_VERSION); 
-
   // для работы доступно 8 IN и OUT пинов: IN1..IN8, OUT1..OUT8
   // по умолчанию они все настроены pinMode(IN*, INPUT); и pinMode(OUT*, OUTPUT);
   // выводим в монитор порта показания IN1 порта

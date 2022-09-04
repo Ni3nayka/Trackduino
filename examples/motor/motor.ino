@@ -17,10 +17,6 @@ void setup() {
   // инициализировать только моторы
   // Trackduino.setup_motor();
 
-  // проверить версию библиотеки
-  // Serial.begin(9600);
-  // Serial.println(TRACKDUINO_LIB_VERSION); 
-
   // для работы доступно 4 мотора: 1,2,3,4
   const int motor_number = 1;
 

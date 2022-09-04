@@ -16,10 +16,6 @@ void setup() {
 
   // инициализировать только RGB
   // Trackduino.setup_RGB();
-
-  // проверить версию библиотеки
-  // Serial.begin(9600);
-  // Serial.println(TRACKDUINO_LIB_VERSION); 
   
   // красный
   Trackduino.RGB_red();              // Вариант 1   
