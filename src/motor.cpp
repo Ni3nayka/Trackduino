@@ -1,8 +1,10 @@
 /*
- * Integration the Trackduino to Arduino IDE
- * 
- * Bakay Egor, june 2022
+ * Integration the Trackduino to Arduino IDE:
  * https://github.com/Ni3nayka/Trackduino
+ * 
+ * author: Egor Bakay <egor_bakay@inbox.ru>
+ * write:  june 2022
+ * modify: september 2022
  */
 
 #include "Trackduino_main.h"
@@ -51,7 +53,7 @@ TrackDuino::motor(int n, int speed=0) {
   if (n>COUNT_MOTOR || n<1) return;
   n--;
   speed = map(constrain(speed,-100,100),0,100,0,255);
-  Serial.println(speed);
+  //Serial.println(speed);
   analogWrite(STBY[n],abs(speed));
   digitalWrite(MOTOR_EN[n],speed!=0);
   digitalWrite(MOTOR_IN1[n],(speed>0)==_revers_motor[n]);
