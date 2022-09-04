@@ -10,7 +10,7 @@
 // подключаем библиотеку
 #include "Trackduino.h"
 
-// создаем объект для блютуза (для управления трекдуино через официальное приложение для телефона)
+// создаем объект для блютуза (для управления трекдуино через официальное приложение для android смартфона)
 // https://robotrack-rus.ru/wiki/doku.php/po/robotrek_pdu
 Bluetooth bluetooth;
 
@@ -26,10 +26,6 @@ Bluetooth bluetooth;
 void setup() { 
   Trackduino.setup(); // инициализируем трекдуино
   bluetooth.setup();  // инициализируем блютуз
-  
-  // проверить версию библиотеки
-  // Serial.begin(9600);
-  // Serial.println(TRACKDUINO_LIB_VERSION); 
 }
 
 void loop () { 
@@ -46,7 +42,6 @@ void loop () {
     Trackduino.RGB_off();  // выключить светодиод
   }
 
-  
   /*
    * bluetooth.x - взять данные с джойстика, по оси X [-100;100]
    * bluetooth.y - взять данные с джойстика, по оси Y [-100;100]
