@@ -7,7 +7,7 @@
  * 
  * author: Egor Bakay <egor_bakay@inbox.ru>
  * write:  august 2022
- * modify: august 2022
+ * modify: september 2022
  */
 
 #pragma once
@@ -52,6 +52,7 @@ Bluetooth::operating() {
     for (int i = 0; i <= commandSize; i++) {
       command[i] = (byte)Serial.read(); // Save command
     }
+    while (Serial.available()) Serial.read(); // очиска мусора, чтобы не было задержек
       
     int fData = (int)command[7];
     // Найдем все включенные клавиши
@@ -68,7 +69,7 @@ Bluetooth::operating() {
         buffer -= 256;
       value[i] = buffer;
     }
-    
+
     x = value[0];
     y = value[1];
     z = value[2];
