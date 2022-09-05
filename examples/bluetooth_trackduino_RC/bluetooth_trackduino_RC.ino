@@ -8,7 +8,7 @@
  */
 
 // подключаем библиотеку
-#include "Trackduino.h"
+#include <Trackduino.h>
 
 // создаем объект для блютуза (для управления трекдуино через официальное приложение для android смартфона)
 // https://robotrack-rus.ru/wiki/doku.php/po/robotrek_pdu
