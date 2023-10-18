@@ -20,8 +20,12 @@ For all implemented devices on the board, there are examples available through t
 
 ### Driver:
 
-There is an archive in the repository <driver.zip > if you have any problems identifying the board, install it.
+To program the board, you need to install the driver, you can find it in the <driver> folder
 
+
+### Robotrack IDE and driver:
+
+https://disk.yandex.ru/d/0gqy1Z4192hnZA
 
 
 Enjoy using it :)
