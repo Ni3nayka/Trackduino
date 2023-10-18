@@ -4,11 +4,11 @@
  * 
  * author: Egor Bakay <egor_bakay@inbox.ru>
  * write:  june 2022
- * modify: september 2022
+ * modify: october 2023
  */
 
-#include "Trackduino_main.h"
 #pragma once
+#include "Trackduino_main.h"
 
 TrackDuino::setup_motor() {
   for (int i = 0; i<COUNT_MOTOR; i++) pinMode(STBY[i], OUTPUT);
@@ -19,13 +19,13 @@ TrackDuino::setup_motor() {
 
 TrackDuino::reverse_clear() {
   for (int i = 0; i<COUNT_MOTOR; i++) {
-    _revers_motor[i] = 0;
+    TrackDuino::_revers_motor[i] = 0;
   }
 }
 
 TrackDuino::reverse_motor(int n, bool dir) {
   if (n>COUNT_MOTOR || n<1) return;
-  _revers_motor[n-1] = dir;
+  TrackDuino::_revers_motor[n-1] = dir;
 }
 
 TrackDuino::motor_forward(int n) { 
